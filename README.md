@@ -40,19 +40,14 @@ Link to the portfolio:
 
 ![BootStrap](index1.png)
 
-- The next thing I added is that "Flag Counter" page tracker google analytics is used which helps to track the visitors number with location and device.
+- The next thing I added is that "Flag Counter" tracker analytics which is used to track the number of visitors with their number of visits with location of their country and their device.
 
 ```JS
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3PFRKP3DC"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-Z3PFRKP3DC');
-    </script>
+<div><a href="https://info.flagcounter.com/K8DY"><img src="https://s11.flagcounter.com/
+count2/K8DY/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/
+pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a></div>
 ```
-![Page Tracker](part3.png)
+![Flag Counter](flagcount.png)
 
 ### Technical requirements (50 pts)​
 
