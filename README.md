@@ -21,7 +21,6 @@ In this project, I'm honing my front-end web development skills by crafting a Pr
 
 Link to the repository:
 [https://github.com/nalijety/nalijety.github.io/blob/main/README.md](https://github.com/nalijety/nalijety.github.io/blob/main/README.md)
-
 Link to the portfolio:
 [https://nalijety.github.io/index.html](https://nalijety.github.io/index.html)
 
