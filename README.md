@@ -1,5 +1,16 @@
 # WAPH-Web Application Programming and Hacking
+
 ## Instructor: Dr. Phu Phung
+
+## Student
+
+**Name**: Tejeswar Reddy Nalijeni
+
+**Email**: nalijety@mail.uc.edu
+
+**Short-bio**: Currently I am pursuing Master's in Information Technology and I am interested in Cybersecurity
+
+![Tejeswar](Tejeswar.jpg)
 
 # Individual Project 1
 ## Front-end Web Development with a Professional Profile Website on github.io cloud service
