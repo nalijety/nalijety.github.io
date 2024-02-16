@@ -47,7 +47,8 @@ Link to the portfolio:
 count2/K8DY/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/
 pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a></div>
 ```
-![Flag Counter](flagcount.png)
+![Flag Counter](index3.png)
+![Flag Counter Analysis](flagcount.png)
 
 ## Technical requirements
 ### Task 1 : Basic Javascript Code
