@@ -19,6 +19,12 @@
 
 In this project, I'm honing my front-end web development skills by crafting a Professional Profile Website. Leveraging the github.io cloud service, I'm not only showcasing my expertise but also gaining practical experience in deployment. The project entails meeting both general and technical requisites, from setting up github.io to implementing Bootstrap for a polished portfolio display. JavaScript functionalities are seamlessly integrated to enhance user interaction. At the heart of the website lies the index.html page, meticulously designed with seven tabs catering to various facets of my professional journey. These tabs cover essential sections such as about me, experience, education, skills, interests, certifications, and miscellaneous details, providing visitors with a comprehensive overview of my profile.
 
+Link to the repository:
+[https://github.com/nalijety/nalijety.github.io/blob/main/README.md](https://github.com/nalijety/nalijety.github.io/blob/main/README.md)
+
+Link to the portfolio:
+[https://nalijety.github.io/index.html](https://nalijety.github.io/index.html)
+
 ### General requirements (30 pts): 
 
 + Create and deploy a personal website on GitHub cloud (github.io) as a professional profile with your resume, including your name, headshot, contact information, background, e.g., education, your experiences and skills (25 pts).
