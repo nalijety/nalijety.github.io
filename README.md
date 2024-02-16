@@ -25,11 +25,15 @@ Link to the repository:
 Link to the portfolio:
 [https://nalijety.github.io/index.html](https://nalijety.github.io/index.html)
 
-### General requirements (30 pts): 
+### Task 1 : General Requirements
+ -I've started my personal website, "nalijety.github.io," with just basic details about me and no fancy design yet. It's like a starting point for me to make it look better and add more cool stuff later on. I'll be adding style and more features to make it a nice place to show off my skills and what I've done.
+ [https://nalijety.github.io/resume.html](https://nalijety.github.io/resume.html)
 
-+ Create and deploy a personal website on GitHub cloud (github.io) as a professional profile with your resume, including your name, headshot, contact information, background, e.g., education, your experiences and skills (25 pts).
- ​
-+ Create a link to a new HTML page to introduce this "Web Application Programming and Hacking" course and related hands-on projects (5 pts)
+ ![Basic Resume](part1.png)
+
+- Created a course link in index.html page in miscllaneous tab where it displays all the course work till now in WAPH course i.e all labs and hackathon reports pdfs.
+
+![Course Work](part2.png)
  ​
 ### Non-technical requirements (20 pts)​
 
