@@ -34,9 +34,8 @@
     <div id="greeting-root"></div>
 		<script src="wishes.js"></script>
     <div id="greetingCookie">Hello</div>
-<!--      <div id="root"></div>
-    <script src="react.js"></script> -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
             <span class="d-block d-lg-none">Tejeswar Reddy Nalijeni</span>
             <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
@@ -248,12 +247,13 @@
 
                 </script>
                 <div id="email" onclick="showhideEmail()">Show my Email</div>
-                <a href="/waph.html">Course Link</a>
-                <!--  <script src="https://waph-uc.github.io/clock.js"></script> -->
+                <a href="/waph.html">Click here for my Course Work</a>
+
+                <h3>Analog Clock</h3>
                 <div>
                     <canvas id="analog-clock" width="150" height="150" style="background-color:#999"></canvas>
                 </div>
-                <b>Joke &#x1F604;</b>
+                <b>Joke of the day &#x1F606;</b>
                 <div id="joke"></div>
                 
                 <script>
@@ -280,7 +280,7 @@
                     setInterval(fetchJoke, 60000);
                 </script>
                 
-                <h3>Random Dog Image</h3>
+                <h4>Random Dog Image</h4>
                 <img id="dog-image" src="" alt="Random Dog Image">
             
                 <script>
@@ -291,9 +291,7 @@
                             dogImage.src = data.message;
                         })
                         .catch(error => console.error('Error fetching data:', error));
-                </script>          
-            
-
+                </script> 
             </div>
             </div>
             
