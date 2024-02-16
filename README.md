@@ -8,7 +8,7 @@
 
 **Email**: nalijety@mail.uc.edu
 
-**Short-bio**: Currently I am pursuing Master's in Information Technology and I am interested in Cybersecurity
+**Short-bio**: Currently I am pursuing Master's in Information Technology and I am interested in Cybersecurity.
 
 ![Tejeswar](Tejeswar.jpg)
 
@@ -52,7 +52,38 @@ pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a></div>
 ## Technical requirements
 ### Task 1 : Basic Javascript Code
 In the "Explore More" tab, I have incorporated several dynamic features to enhance user engagement. These include a digital clock and an analog clock for timekeeping, a toggle to show or hide my email address, and a unique wishing feature that dynamically adjusts based on the time of day, offering personalized greetings such as "GOOD MORNING!!," "GOOD AFTERNOON!!," or "GOOD EVENING!!." The wish is initially displayed as an alert and then seamlessly integrated into the page for a welcoming touch. These interactive elements add flair and functionality to the website, enriching the user experience.
+```JS
+ <div id="digit-clock"></div>
+                <script>
+                    function displayTime() {
+                        document.getElementById('digit-clock').innerHTML = "Current time:" + new Date();
+                    }
+                    setInterval(displayTime, 500);
+                    function validateInput(inputId) {
+                        var input = document.getElementById(inputId).value;
+                        if (input.length === 0) {
+                            alert("Please enter some text");
+                            return false;
+                        }
+                        return true;
+                    }
+                    function encodeInput(input) {
+                        const encodedData = document.createElement('div');
+                        encodedData.innerText = input;
+                        return encodedData.innerHTML;
+                    }
 
+                </script>
+                <div id="email" onclick="showhideEmail()">Show my Email</div>
+                <a href="/waph.html">Click here for my Course Work</a>
+
+                <h3>Analog Clock</h3>
+                <div>
+                    <canvas id="analog-clock" width="150" height="150" style="background-color:#999"></canvas>
+                </div>
+```
+
+- Below is the aditional functionality which wishes the users.
 ```JS
 // greetings.js
 const Greeting = () => {
