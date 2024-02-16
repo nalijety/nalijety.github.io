@@ -57,7 +57,7 @@ In the "Explore More" tab, I have incorporated several dynamic features to enhan
  <div id="digit-clock"></div>
                 <script>
                     function displayTime() {
-                        document.getElementById('digit-clock').innerHTML = "Current time:" + new Date();
+document.getElementById('digit-clock').innerHTML = "Current time:" + new Date();
                     }
                     setInterval(displayTime, 500);
                     function validateInput(inputId) {
@@ -80,7 +80,8 @@ In the "Explore More" tab, I have incorporated several dynamic features to enhan
 
                 <h3>Analog Clock</h3>
                 <div>
-                    <canvas id="analog-clock" width="150" height="150" style="background-color:#999"></canvas>
+<canvas id="analog-clock" width="150" height="150"
+style="background-color:#999"></canvas>
                 </div>
 ```
 
@@ -103,8 +104,8 @@ const Greeting = () => {
 
   return React.createElement('h2', null, greetingMessage);
 };
-
-ReactDOM.render(React.createElement(Greeting, null), document.getElementById('greeting-root'));
+ReactDOM.render(React.createElement(Greeting, null),
+document.getElementById('greeting-root'));
 ```
 ### Task 2 : Public APIs Integration
 ### Joke API:
@@ -188,7 +189,7 @@ I've implemented the use of "setCookie()" and "getCookie()" functions to manage 
             const lastVis = getCookie("lastVis");
             const greetEle = document.getElementById("greetingCookie");
             if (lastVis) {
-                greetEle.innerHTML = "Welcome back! Your last visit was on " + lastVis + ".";
+greetEle.innerHTML = "Welcome back! Your last visit was on " + lastVis + ".";
             } else {
                 greetEle.innerHTML = "Welcome to my portfolio!";
             }
