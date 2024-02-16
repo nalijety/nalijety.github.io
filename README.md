@@ -49,38 +49,121 @@ pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a></div>
 ```
 ![Flag Counter](flagcount.png)
 
-### Technical requirements (50 pts)​
+## Technical requirements
+### Task 1 : Basic Javascript Code
+In the "Explore More" tab, I have incorporated several dynamic features to enhance user engagement. These include a digital clock and an analog clock for timekeeping, a toggle to show or hide my email address, and a unique wishing feature that dynamically adjusts based on the time of day, offering personalized greetings such as "GOOD MORNING!!," "GOOD AFTERNOON!!," or "GOOD EVENING!!." The wish is initially displayed as an alert and then seamlessly integrated into the page for a welcoming touch. These interactive elements add flair and functionality to the website, enriching the user experience.
 
-#### Basic JavaScript code (20 pts)​
+```JS
+// greetings.js
+const Greeting = () => {
+  const currentHour = new Date().getHours();
+  let greetingMessage;
 
-+ Use jQuery and one more open-source JavaScript framework/library​ to implement JavaScript code introduced in Lab 2, including, a digital clock; an analog clock; show/hide your email; and one more functionality of your choice. **(5 pts each)**
+  if (currentHour >= 5 && currentHour < 12) {
+    greetingMessage = 'Good Morning!!!';
+  } else if (currentHour >= 12 && currentHour < 17) {
+    greetingMessage = 'Good Afternoon!!!';
+  } else {
+    greetingMessage = 'Good Evening!!!';
+  }
 
-+ Two public Web APIs integration (20 pts)​
+  alert(greetingMessage); // Alert moved outside of the conditional statement
 
-1. Integrate the jokeAPI ([https://v2.jokeapi.dev/joke/Any](https://v2.jokeapi.dev/joke/Any), similar to Lab 2.2.d.i) with Any category of joke to display a new joke in your page every 1 minute
+  return React.createElement('h2', null, greetingMessage);
+};
 
-2. Integrate a public API with graphics. Examples: [https://xkcd.com/info.0.json](https://xkcd.com/info.0.json), [https://www.weatherbit.io](https://www.weatherbit.io).
+ReactDOM.render(React.createElement(Greeting, null), document.getElementById('greeting-root'));
+```
+### Task 2 : Public APIs Integration
+### Joke API:
+In this task, I have integrated the joke API in the "index.html" which is updated automatically for each and every minute. [https://v2.jokeapi.dev/joke/Any](https://v2.jokeapi.dev/joke/Any)
+```JS
+       <b>Joke &#x1F606;</b>
+                <div id="joke"></div>
+                <script>
+                    // Function to fetch and display a joke
+                    function fetchJoke() {
+                        fetch('https://v2.jokeapi.dev/joke/Any')
+                            .then(response => response.json())
+                            .then(data => {
+// Check if the joke is a single joke or a setup and delivery
+const joke = data.type === 'single' ? data.joke : `${data.setup}<br>${data.delivery}`;
+                                // Display the joke
+                                document.getElementById('joke').innerHTML = joke;
+                            })
+                            .catch(error => {
+                                console.error('Error fetching joke:', error);
+                            });
+                    }
+            
+                    // Fetch a joke immediately when the page loads
+                    fetchJoke();
 
-+ Use JavaScript cookies to remember the client (10 pts): If first-time visit, display a message "Welcome to my homepage!", otherwise, display a message "Welcome back! Your last visit was <the date/time of last visit>"
+                    // Fetch a new joke every 1 minute
+                    setInterval(fetchJoke, 60000);
+                </script>
+```
+### Dog API:
+For this task, I've added a feature that fetches random pictures of dogs from a public API (https://dog.ceo/dog-api/). Each time you visit or refresh the page, you'll see a new picture of a dog. It's a fun addition that keeps things fresh and adds a bit of enjoyment to the website. [https://dog.ceo/api/breeds/image/random](https://dog.ceo/api/breeds/image/random)
 
+```JS
+<h4>Random Dog Image</h4>
+                <img id="dog-image" src="" alt="Random Dog Image">
+            
+                <script>
+                    fetch('https://dog.ceo/api/breeds/image/random')
+                        .then(response => response.json())
+                        .then(data => {
+                            const dogImage = document.getElementById('dog-image');
+                            dogImage.src = data.message;
+                        })
+                        .catch(error => console.error('Error fetching data:', error));
+                </script> 
+```
+![Joke and Dog Image](index2.png)
 
-## Report
+### Integration of Cookies 
+I've implemented the use of "setCookie()" and "getCookie()" functions to manage and display personalized messages on my portfolio website. Upon visiting the site, users are greeted with the message "Welcome to my portfolio," which is stored as a cookie. Additionally, the website also displays a message indicating the user's last visit along with the date. This personalized touch enhances the user experience and makes the website feel more welcoming and interactive.
+```JS
+<script>
+//other script
+<div id1="greetingCookie">Hello</div>
+//other script
+     function setCookie(name, value, expiryDays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (expiryDays*24*60*60*1000));
+            let expires = "expires="+ d.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
 
-You can write a report using Markdown format or any Word processor, i.e., you do not need to use Markdown to write your report. Your report should follow the template/outline provided in Lecture 2 ([https://github.com/phungph-uc/waph/blob/main/README-template.md](https://github.com/phungph-uc/waph/blob/main/README-template.md)) which should include the course name and instructor, your name and email together with your headshot (150x150 pixels), and sub-sections of the assignment's overview, and each task and sub-task.
+        function getCookie(name) {
+            let cookName = name + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for(let i = 0; i <ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(cookName) == 0) {
+                    return c.substring(cookName.length, c.length);
+                }
+            }
+            return "";
+        }
 
-There should be an overview sub-section where you must write an overview of the assignment and the outcomes you learned from it. Include your website's clickable URL deployed on `github.io`. Also, include a direct clickable link to the project folder on GitHub.com so that it can be viewed when grading, for example, [https://github.com/phungph-uc/waph-phungph/tree/main/individual-project1](https://github.com/phungph-uc/waph-phungph/tree/main/individual-project1).
+        function welcomeUser() {
+            const lastVis = getCookie("lastVis");
+            const greetEle = document.getElementById("greetingCookie");
+            if (lastVis) {
+                greetEle.innerHTML = "Welcome back! Your last visit was on " + lastVis + ".";
+            } else {
+                greetEle.innerHTML = "Welcome to my portfolio!";
+            }
+            const now = new Date();
+            setCookie("lastVis", now.toLocaleString(), 365);
+        }
 
-For each sub-task, write a brief summary of how you complete it. You are welcome to include code snippets and screenshots to demonstrate the outcome, however, they are not required. **Please note that demo screenshots must include your virtual machine name or your name with proper captions and be visible, i.e., in high resolution, not too blurry or with much blank space, for grading**. 
+        welcomeUser();
+```
 
-Your report must be exported in  PDF with contents and screenshots are correctly rendered in proper order. The PDF file should be named `your-username-waph-project1.pdf`, e.g., `phungph-waph-project1.pdf`, and uploaded to Canvas to submit by the deadline. 
-
-
-## Deliverables and Submission
-
-You need to submit **three** deliverables in PDF files for grading:
-
-+ Your report mentioned above.
-
-+ Your deployed website printed from a browser in PDF.
-
-+  The source code of your deployed website printed from a browser in PDF.
