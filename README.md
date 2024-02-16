@@ -17,7 +17,7 @@
 
 ## Overview and Requirements 
 
-In this project, I'm honing my front-end web development skills by crafting a Professional Profile Website. Leveraging the github.io cloud service, I'm not only showcasing my expertise but also gaining practical experience in deployment. The project entails meeting both general and technical requisites, from setting up github.io to implementing Bootstrap for a polished portfolio display. JavaScript functionalities are seamlessly integrated to enhance user interaction. At the heart of the website lies the index.html page, meticulously designed with seven tabs catering to various facets of my professional journey. These tabs cover essential sections such as about me, experience, education, skills, interests, certifications, and miscellaneous details, providing visitors with a comprehensive overview of my profile.
+In this project, I'm honing my front-end web development skills by crafting a Professional Profile Website. Leveraging the github.io cloud service, I'm not only showcasing my expertise but also gaining practical experience in deployment. The project entails meeting both general and technical requisites, from setting up github.io to implementing Bootstrap for a polished portfolio display. JavaScript functionalities are seamlessly integrated to enhance user interaction. At the heart of the website lies the index.html page, meticulously designed with seven tabs catering to various facets of my professional journey. These tabs cover essential sections such as about me, experience, education, skills, interests, certifications, and explore more which provides visitors with a comprehensive overview of my profile.
 
 Link to the repository:
 [https://github.com/nalijety/nalijety.github.io/blob/main/README.md](https://github.com/nalijety/nalijety.github.io/blob/main/README.md)
@@ -25,23 +25,34 @@ Link to the repository:
 Link to the portfolio:
 [https://nalijety.github.io/index.html](https://nalijety.github.io/index.html)
 
-### Task 1 : General Requirements
+### General Requirements
  -I've started my personal website, "nalijety.github.io," with just basic details about me and no fancy design yet. It's like a starting point for me to make it look better and add more cool stuff later on. I'll be adding style and more features to make it a nice place to show off my skills and what I've done.
  [https://nalijety.github.io/resume.html](https://nalijety.github.io/resume.html)
 
- ![Basic Resume](part1.png)
+ ![Resume](Resume.png)
 
-- Created a course link in index.html page in miscllaneous tab where it displays all the course work till now in WAPH course i.e all labs and hackathon reports pdfs.
+- I have added a "Coursework" section to the index.html page under the "Explore Me" tab, showcasing all the work completed thus far in the WAPH course. This section features contains PDFs of all the lab reports and hackathon submissions, providing a comprehensive overview of my progress and achievements in the course. Users can easily access and review the coursework materials directly from the website.
 
-![Course Work](part2.png)
+![Course Work Page](waph.png)
  ​
-### Non-technical requirements (20 pts)​
+### Non-Technical Requirements
+- I've integrated an open-source Bootstrap template into my portfolio, complete with a page tracker for enhanced navigation. Within the Portfolio section, I've meticulously crafted sections tailored to highlight my profile for job applications. These sections encompass crucial areas such as about me, work experience, education background, skillset, personal interests, certifications earned, and a Explore more section for additional details. This comprehensive approach ensures that potential employers can easily access and evaluate my qualifications and suitability for roles.
 
-+ Use an open-source CSS template or framework such as Bootstrap​
+![BootStrap](index1.png)
 
-_Target this profile for your potential employer, and your page will be graded as a part of your job application​_
+- The next thing I added is that "Flag Counter" page tracker google analytics is used which helps to track the visitors number with location and device.
 
-+ Include a page tracker, for example: [https://analytics](https://analytics.withgoogle.com/)](https://analytics.withgoogle.com/), [https://flagcounter.com/](https://flagcounter.com/).
+```JS
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3PFRKP3DC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z3PFRKP3DC');
+    </script>
+```
+![Page Tracker](part3.png)
 
 ### Technical requirements (50 pts)​
 
