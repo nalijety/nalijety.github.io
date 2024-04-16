@@ -10,7 +10,7 @@
 
 **Short-bio**: Currently I am pursuing Master's in Information Technology and I am interested in Cybersecurity.
 
-![Tejeswar](images/Tejeswar.jpg)
+![Tejeswar](Tejeswar.jpg)
 
 # Individual Project 1
 ## Front-end Web Development with a Professional Profile Website on github.io cloud service
